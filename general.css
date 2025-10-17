@@ -1,0 +1,37 @@
+p {
+  font-family: Roboto, arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body {
+  font-family: Roboto, arial;
+  margin: 0;
+  padding-left: 190px;
+  padding-top: 57px;
+  height: 1000px;
+
+  transition: all 0.14s ease;
+}
+
+@media (max-width: 757.01px) {
+  body {
+    padding-left: 0px;
+    transition: all 0.14s ease;
+  }
+}
+@media (min-width: 757.02px) {
+  body {
+    padding-left: 72px;
+    transition: all 0.14s ease;
+  }
+}
+@media (max-width: 1314px) and (min-width: 757.03px) {
+  body {
+    padding-left: 80px;
+  }
+}
+@media (min-width: 1315px) {
+  body {
+    padding-left: 230px;
+  }
+}

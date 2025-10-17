@@ -1,0 +1,347 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 57px;
+  justify-content: space-between;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.79); /* semi-transparent white overlay */
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(20px);
+
+  z-index: 100;
+}
+.left-section {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+.hamburger-menu-logo {
+  height: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+  /* under this code will help to not dragging image */
+  -webkit-user-drag: none; /* Chrome, Safari, Opera */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.youtube-logo {
+  height: 20px;
+  padding-left: 5px;
+  cursor: pointer;
+  /* under this code will help to not dragging image */
+  -webkit-user-drag: none; /* Chrome, Safari, Opera */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.middle-section {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  margin-left: 70px;
+  margin-right: 35px;
+  align-items: center;
+}
+.youtube-search-input {
+  flex: 1;
+  height: 35px;
+  font-family: Roboto, arial;
+  font-size: 18px;
+  padding-left: 12px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(207, 207, 207);
+  box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.03);
+  width: 0;
+}
+.youtube-search-input:focus {
+  outline: none;
+  border-color: #2a64ec;
+}
+
+.youtube-search-input::placeholder {
+  font-size: 18px;
+}
+.search-container {
+  position: relative;
+}
+.search-tooltip {
+  position: absolute;
+  bottom: -30.5px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  font-family: roboto, arial;
+  font-size: 15px;
+  left: -0.5px;
+  border-radius: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.14s;
+}
+.search-container:hover .search-tooltip {
+  opacity: 1;
+}
+.search-button {
+  height: 39px;
+  width: 60px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(207, 207, 207);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+  border-left: none;
+}
+.search-icon {
+  height: 25px;
+  cursor: pointer;
+  /* under this code will help to not dragging image */
+  -webkit-user-drag: none; /* Chrome, Safari, Opera */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+  cursor: pointer;
+}
+.voice-search-icon {
+  height: 25px;
+  padding-left: 1px;
+  cursor: pointer;
+  /* under this code will help to not dragging image */
+  -webkit-user-drag: none; /* Chrome, Safari, Opera */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.search-voice-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.search-voice-tooltip {
+  position: absolute;
+  bottom: -30px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  font-family: roboto, arial;
+  font-size: 15px;
+  border-radius: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.14s;
+  white-space: nowrap;
+}
+.search-voice-container:hover .search-voice-tooltip {
+  opacity: 1;
+}
+.right-section {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  padding-right: 22px;
+}
+.upload-logo {
+  height: 24px;
+  cursor: pointer;
+  /* under this code will help to not dragging image */
+  -webkit-user-drag: none; /* Chrome, Safari, Opera */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.create-container,
+.youtube-apps-container,
+.notification-container,
+.profile-container-for-tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.create {
+  position: absolute;
+  bottom: -38px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  font-family: roboto, arial;
+  font-size: 15px;
+  border-radius: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.14s;
+}
+.create-container:hover .create {
+  opacity: 1;
+}
+
+.youtube-apps {
+  height: 25px;
+  cursor: pointer;
+  /* under this code will help to not dragging image */
+  -webkit-user-drag: none; /* Chrome, Safari, Opera */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.youtube-apps-tooltip {
+  position: absolute;
+  bottom: -38px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  font-family: roboto, arial;
+  font-size: 15px;
+  border-radius: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.14s;
+  white-space: nowrap;
+}
+.youtube-apps-container:hover .youtube-apps-tooltip {
+  opacity: 1;
+}
+.notifications-icon {
+  height: 24px;
+  cursor: pointer;
+  /* under this code will help to not dragging image */
+  -webkit-user-drag: none; /* Chrome, Safari, Opera */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.notification-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.notification-count {
+  font-family: Roboto, arial;
+  font-weight: 500;
+  position: absolute;
+  background-color: rgb(208, 0, 0);
+  color: white;
+  top: -2px;
+  right: -6px;
+  font-size: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 20px;
+  border-style: solid;
+}
+.notifications-tooltip {
+  position: absolute;
+  bottom: -38px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  font-family: roboto, arial;
+  font-size: 15px;
+  border-radius: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.14s;
+}
+.notification-container:hover .notifications-tooltip {
+  opacity: 1;
+}
+.profile-photo {
+  height: 35px;
+  width: 35px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  /* under this code will help to not dragging image */
+  -webkit-user-drag: none; /* Chrome, Safari, Opera */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.profile-container-for-tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.profile {
+  position: absolute;
+  bottom: -30px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  font-family: roboto, arial;
+  font-size: 13px;
+  border-radius: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.14s;
+}
+.profile-container-for-tooltip:hover .profile {
+  opacity: 1;
+}
